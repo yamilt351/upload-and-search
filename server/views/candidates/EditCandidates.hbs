@@ -1,0 +1,31 @@
+<div>
+  <div><h1>edit candidate</h1></div>
+  <div>
+    <form action="/update/updated-candidate/{{candidate._id}}?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+      <div>
+        <input type="text" required placeholder="name" name="name" />
+      </div>
+      <div>
+        <input type="text" required placeholder="country" name="country" />
+      </div>
+      <div>
+        <input type="email" required placeholder="email" name="email" />
+      </div>
+      <div>
+        <input type="text" required placeholder="skills" name="skills" />
+      </div>
+      <div>
+        <input
+          type="text"
+          required
+          placeholder="description"
+          name="description"
+        />
+      </div>
+      <div>
+        <button type="submit"> save changes</button>
+      </div>
+    </form>
+  </div>
+</div>

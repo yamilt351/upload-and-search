@@ -1,0 +1,29 @@
+<div>
+  {{#each user}}
+    <article>
+      <a
+        href="/update/updated-candidate/{{_id}}"
+        rel="noopener noreferrer"
+      >edit</a>
+      <h1>{{name}}</h1>
+      <h2>{{country}}</h2>
+      <h3>{{email}}</h3>
+      <p>{{skills}}</p>
+      <p>{{description}}</p>
+      <form
+        action="/delete/deleted-candidate/{{_id}}?_method=DELETE"
+        method="POST"
+      >
+        <input type="hidden" name="_method" value="DELETE" />
+        <button type="submit">Delete candidate</button>
+      </form>
+    </article>
+  {{else}}
+    <div>
+      <p> there's no candidates here</p>
+      <button>
+        <a href="/upload/candidate">create one</a>
+      </button>
+    </div>
+  {{/each}}
+</div>
